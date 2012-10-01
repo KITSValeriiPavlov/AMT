@@ -4,7 +4,12 @@
  */
 
 var express = require('express'),
-	routes = require('./routes');
+	routes = require('./routes')
+	ejs = require('ejs');
+
+// Change EJS brackets from <%%> to {{}}
+ejs.open = '{{';
+ejs.close = '}}';  
 
 var app = module.exports = express.createServer();
 
